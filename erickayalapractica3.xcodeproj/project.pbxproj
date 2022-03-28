@@ -13,6 +13,9 @@
 		D056D16127EFB4D6005B6F16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D056D15F27EFB4D6005B6F16 /* Main.storyboard */; };
 		D056D16327EFB4D8005B6F16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D056D16227EFB4D8005B6F16 /* Assets.xcassets */; };
 		D056D16627EFB4D8005B6F16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D056D16427EFB4D8005B6F16 /* LaunchScreen.storyboard */; };
+		D056D16E27EFBD6D005B6F16 /* Drinks.plist in Resources */ = {isa = PBXBuildFile; fileRef = D056D16D27EFBD6D005B6F16 /* Drinks.plist */; };
+		D056D17027EFCD82005B6F16 /* DelaGothicOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D056D16F27EFCD81005B6F16 /* DelaGothicOne-Regular.ttf */; };
+		D056D17227EFD32A005B6F16 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056D17127EFD329005B6F16 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		D056D16227EFB4D8005B6F16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D056D16527EFB4D8005B6F16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D056D16727EFB4D8005B6F16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D056D16D27EFBD6D005B6F16 /* Drinks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Drinks.plist; sourceTree = "<group>"; };
+		D056D16F27EFCD81005B6F16 /* DelaGothicOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DelaGothicOne-Regular.ttf"; sourceTree = "<group>"; };
+		D056D17127EFD329005B6F16 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,8 @@
 		D056D15827EFB4D6005B6F16 /* erickayalapractica3 */ = {
 			isa = PBXGroup;
 			children = (
+				D056D16F27EFCD81005B6F16 /* DelaGothicOne-Regular.ttf */,
+				D056D16D27EFBD6D005B6F16 /* Drinks.plist */,
 				D056D15927EFB4D6005B6F16 /* AppDelegate.swift */,
 				D056D15B27EFB4D6005B6F16 /* SceneDelegate.swift */,
 				D056D15D27EFB4D6005B6F16 /* ViewController.swift */,
@@ -63,6 +71,7 @@
 				D056D16227EFB4D8005B6F16 /* Assets.xcassets */,
 				D056D16427EFB4D8005B6F16 /* LaunchScreen.storyboard */,
 				D056D16727EFB4D8005B6F16 /* Info.plist */,
+				D056D17127EFD329005B6F16 /* TableViewController.swift */,
 			);
 			path = erickayalapractica3;
 			sourceTree = "<group>";
@@ -126,7 +135,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D056D16627EFB4D8005B6F16 /* LaunchScreen.storyboard in Resources */,
+				D056D16E27EFBD6D005B6F16 /* Drinks.plist in Resources */,
 				D056D16327EFB4D8005B6F16 /* Assets.xcassets in Resources */,
+				D056D17027EFCD82005B6F16 /* DelaGothicOne-Regular.ttf in Resources */,
 				D056D16127EFB4D6005B6F16 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +152,7 @@
 				D056D15E27EFB4D6005B6F16 /* ViewController.swift in Sources */,
 				D056D15A27EFB4D6005B6F16 /* AppDelegate.swift in Sources */,
 				D056D15C27EFB4D6005B6F16 /* SceneDelegate.swift in Sources */,
+				D056D17227EFD32A005B6F16 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,9 +304,11 @@
 				DEVELOPMENT_TEAM = A26BSB4QL6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = erickayalapractica3/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Drinks App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,7 +320,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,9 +334,11 @@
 				DEVELOPMENT_TEAM = A26BSB4QL6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = erickayalapractica3/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Drinks App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +350,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
