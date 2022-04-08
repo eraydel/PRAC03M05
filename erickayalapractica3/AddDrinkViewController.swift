@@ -13,14 +13,15 @@ class AddDrinkViewController: UIViewController {
     @IBOutlet weak var ingredients: UITextView!
     @IBOutlet weak var directions: UITextView!
     @IBOutlet weak var image: UIImageView!
-
+    let scroll = UIScrollView()
     
     var datos = Drink()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        
     }
-    
     
     /*
     // MARK: - Navigation
@@ -60,5 +61,18 @@ class AddDrinkViewController: UIViewController {
     
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+}
+
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
