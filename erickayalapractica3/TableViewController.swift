@@ -9,48 +9,39 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    var datos = [[String:Any]]() // dado que el archivo Drinks es un arreglo de diccionarios que contiene los drinks
+    var datos = [Drink]()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let appDel = UIApplication.shared.delegate as! AppDelegate
+        datos = appDel.getAllDrinks()
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getData()
     }
     
-    
-    /*
-     Method: getData
-     Created by: Erick Ayala
-     Created at: 25/03/2022
-     */
-    func getData(){
-        if let filePath = Bundle.main.url(forResource: "Drinks", withExtension: "plist"){
-            do{
-                let bytes = try Data(contentsOf: filePath)
-                let tmp   = try PropertyListSerialization.propertyList(from: bytes, options: .mutableContainers, format: nil)
-                datos = tmp as! [[String:Any]]
-            }
-            catch{
-                print(error.localizedDescription)
-            }
-        }
+     
+    @IBAction func updateTable(_ sender: Any) {
+        let appDel = UIApplication.shared.delegate as! AppDelegate
+        datos = appDel.getAllDrinks()
+        self.tableView.reloadData()
     }
+   
 
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        
         //get the name attribute
-        let elDict = datos[indexPath.row]
-        let drinkName  = (elDict["name"] as? String ) ?? "\(indexPath)"
-        
-        let imageDrink = (elDict["image"] as? String) ?? "\(indexPath)"
+        let drink = datos[indexPath.row]
+        let imageDrink = (drink.image) ?? ""
         let image =  UIImage(named: imageDrink.lowercased()) ?? UIImage()
-        
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "myTableView", for: indexPath) 
-        
-        
-        cell.textLabel?.text = drinkName
+        cell.textLabel?.text = drink.name
+        cell.detailTextLabel?.text = drink.ingredients
         cell.imageView?.contentMode = UIView.ContentMode.scaleAspectFill
         cell.imageView?.frame.size.width = 40
         cell.imageView?.frame.size.height = 40
@@ -72,6 +63,7 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        refreshControl?.endRefreshing()
         return datos.count
     }
     
@@ -80,14 +72,28 @@ class TableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let detailsVC = segue.destination as! ViewController
-        if let indexPath = tableView.indexPathForSelectedRow {
-            let theDrink = datos[indexPath.row]
-            detailsVC.drink = theDrink //agregar comom miembro de la clase VC a drinkName
-            tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard let identifier = segue.identifier else { return }
+        
+        switch identifier {
+            case "details":
+                let detailsVC = segue.destination as! ViewController
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    let theDrink = datos[indexPath.row]
+                    detailsVC.drink = theDrink //agregar como miembro de la clase VC a drinkName
+                    tableView.deselectRow(at: indexPath, animated: true)
+                }
+
+            case "addDrink":
+                print("create new drink")
+
+            default:
+                print("reloading data...")//self.tableView.reloadData()
         }
+        
     }
     
+
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

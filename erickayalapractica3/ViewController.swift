@@ -15,14 +15,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var ingredientes: UITextView!
     @IBOutlet weak var directions: UITextView!
     
-    var drink: [String:Any]?
+    var drink = Drink()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         drinkName.font = UIFont(name: "DelagothicOne-Regular", size: 15)
-        drinkName.text  = (drink?["name"] as? String) ?? ""
+        drinkName.text  = drink.name
         
-        let imageDrink = (drink?["image"] as? String) ?? ""
+        let imageDrink = drink.image ?? ""
         let image =  UIImage(named: imageDrink.lowercased()) ?? UIImage()
         
         imageview.contentMode = UIView.ContentMode.scaleAspectFill
@@ -32,14 +32,13 @@ class ViewController: UIViewController {
         imageview.clipsToBounds = true
         imageview.image = image
         
-        ingredientes.text = (drink?["ingredients"] as? String) ?? ""
-        directions.text = (drink?["directions"] as? String) ?? ""
+        ingredientes.text = drink.ingredients
+        directions.text = drink.directions
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
     
     @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

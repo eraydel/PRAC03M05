@@ -16,6 +16,11 @@
 		D056D16E27EFBD6D005B6F16 /* Drinks.plist in Resources */ = {isa = PBXBuildFile; fileRef = D056D16D27EFBD6D005B6F16 /* Drinks.plist */; };
 		D056D17027EFCD82005B6F16 /* DelaGothicOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D056D16F27EFCD81005B6F16 /* DelaGothicOne-Regular.ttf */; };
 		D056D17227EFD32A005B6F16 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056D17127EFD329005B6F16 /* TableViewController.swift */; };
+		D0EDA6D527FDF59A00AC2A9C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EDA6D427FDF59A00AC2A9C /* CoreData.framework */; };
+		D0EDA6D827FDF6E600AC2A9C /* erickayalapractica3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0EDA6D627FDF6E600AC2A9C /* erickayalapractica3.xcdatamodeld */; };
+		D0EDA6DB27FDF89800AC2A9C /* Drink+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EDA6D927FDF89800AC2A9C /* Drink+CoreDataClass.swift */; };
+		D0EDA6DC27FDF89800AC2A9C /* Drink+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EDA6DA27FDF89800AC2A9C /* Drink+CoreDataProperties.swift */; };
+		D0EDA6DE27FE191A00AC2A9C /* AddDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EDA6DD27FE191A00AC2A9C /* AddDrinkViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		D056D16D27EFBD6D005B6F16 /* Drinks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Drinks.plist; sourceTree = "<group>"; };
 		D056D16F27EFCD81005B6F16 /* DelaGothicOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DelaGothicOne-Regular.ttf"; sourceTree = "<group>"; };
 		D056D17127EFD329005B6F16 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		D0EDA6D427FDF59A00AC2A9C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D0EDA6D727FDF6E600AC2A9C /* erickayalapractica3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = erickayalapractica3.xcdatamodel; sourceTree = "<group>"; };
+		D0EDA6D927FDF89800AC2A9C /* Drink+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Drink+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		D0EDA6DA27FDF89800AC2A9C /* Drink+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Drink+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		D0EDA6DD27FE191A00AC2A9C /* AddDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrinkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0EDA6D527FDF59A00AC2A9C /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +59,7 @@
 			children = (
 				D056D15827EFB4D6005B6F16 /* erickayalapractica3 */,
 				D056D15727EFB4D6005B6F16 /* Products */,
+				D0EDA6D327FDF59A00AC2A9C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +74,8 @@
 		D056D15827EFB4D6005B6F16 /* erickayalapractica3 */ = {
 			isa = PBXGroup;
 			children = (
+				D0EDA6D927FDF89800AC2A9C /* Drink+CoreDataClass.swift */,
+				D0EDA6DA27FDF89800AC2A9C /* Drink+CoreDataProperties.swift */,
 				D056D16F27EFCD81005B6F16 /* DelaGothicOne-Regular.ttf */,
 				D056D16D27EFBD6D005B6F16 /* Drinks.plist */,
 				D056D15927EFB4D6005B6F16 /* AppDelegate.swift */,
@@ -72,8 +86,18 @@
 				D056D16427EFB4D8005B6F16 /* LaunchScreen.storyboard */,
 				D056D16727EFB4D8005B6F16 /* Info.plist */,
 				D056D17127EFD329005B6F16 /* TableViewController.swift */,
+				D0EDA6D627FDF6E600AC2A9C /* erickayalapractica3.xcdatamodeld */,
+				D0EDA6DD27FE191A00AC2A9C /* AddDrinkViewController.swift */,
 			);
 			path = erickayalapractica3;
+			sourceTree = "<group>";
+		};
+		D0EDA6D327FDF59A00AC2A9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0EDA6D427FDF59A00AC2A9C /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,10 +173,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0EDA6DC27FDF89800AC2A9C /* Drink+CoreDataProperties.swift in Sources */,
 				D056D15E27EFB4D6005B6F16 /* ViewController.swift in Sources */,
+				D0EDA6D827FDF6E600AC2A9C /* erickayalapractica3.xcdatamodeld in Sources */,
+				D0EDA6DB27FDF89800AC2A9C /* Drink+CoreDataClass.swift in Sources */,
 				D056D15A27EFB4D6005B6F16 /* AppDelegate.swift in Sources */,
 				D056D15C27EFB4D6005B6F16 /* SceneDelegate.swift in Sources */,
 				D056D17227EFD32A005B6F16 /* TableViewController.swift in Sources */,
+				D0EDA6DE27FE191A00AC2A9C /* AddDrinkViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +404,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D0EDA6D627FDF6E600AC2A9C /* erickayalapractica3.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D0EDA6D727FDF6E600AC2A9C /* erickayalapractica3.xcdatamodel */,
+			);
+			currentVersion = D0EDA6D727FDF6E600AC2A9C /* erickayalapractica3.xcdatamodel */;
+			path = erickayalapractica3.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D056D14E27EFB4D6005B6F16 /* Project object */;
 }
