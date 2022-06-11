@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class TableViewController: UITableViewController {
     
@@ -43,11 +44,11 @@ class TableViewController: UITableViewController {
         cell.textLabel?.text = drink.name
         cell.detailTextLabel?.text = drink.ingredients
         cell.imageView?.contentMode = UIView.ContentMode.scaleAspectFill
-        cell.imageView?.frame.size.width = 40
-        cell.imageView?.frame.size.height = 40
-        cell.imageView?.layer.cornerRadius = 20
+        cell.imageView?.frame.size.width = 60
+        cell.imageView?.frame.size.height = 60
+        cell.imageView?.layer.cornerRadius = 30
         cell.imageView?.clipsToBounds = true
-        cell.imageView?.image = image.resizeImageWithHeight(newW: 40, newH: 40)
+        cell.imageView?.image = image.resizeImageWithHeight(newW: 60, newH: 60)
         
         return cell
     }
@@ -94,7 +95,23 @@ class TableViewController: UITableViewController {
     }
     
 
-
+    @IBAction func btnLogout(_ sender: Any) {
+    
+        print("cerrando sesión...")
+        do {
+            try Auth.auth().signOut()
+            //Obtenemos una referencia al SceneDelegate:
+            //Podría haber mas de una escena en IpAd OS o en MacOS
+            let escena = UIApplication.shared.connectedScenes.first
+            print("sesión cerrada")
+            let sd = escena?.delegate as! SceneDelegate
+            sd.cambiarVistaA("")
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+    }
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

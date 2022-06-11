@@ -21,6 +21,12 @@
 		D0EDA6DB27FDF89800AC2A9C /* Drink+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EDA6D927FDF89800AC2A9C /* Drink+CoreDataClass.swift */; };
 		D0EDA6DC27FDF89800AC2A9C /* Drink+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EDA6DA27FDF89800AC2A9C /* Drink+CoreDataProperties.swift */; };
 		D0EDA6DE27FE191A00AC2A9C /* AddDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EDA6DD27FE191A00AC2A9C /* AddDrinkViewController.swift */; };
+		D0F2C8C42853FCD00073A8BF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D0F2C8C32853FCD00073A8BF /* FirebaseAuth */; };
+		D0F2C8C62853FD850073A8BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0F2C8C52853FD850073A8BF /* GoogleService-Info.plist */; };
+		D0F2C8C82853FED60073A8BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F2C8C72853FED60073A8BF /* LoginViewController.swift */; };
+		D0F2C8CA285429BD0073A8BF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F2C8C9285429BD0073A8BF /* AVFoundation.framework */; };
+		D0F2C8CC285429C90073A8BF /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F2C8CB285429C80073A8BF /* Photos.framework */; };
+		D0F2C8CE28542AF40073A8BF /* AlbumDrinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F2C8CD28542AF40073A8BF /* AlbumDrinks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +46,11 @@
 		D0EDA6D927FDF89800AC2A9C /* Drink+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Drink+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		D0EDA6DA27FDF89800AC2A9C /* Drink+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Drink+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		D0EDA6DD27FE191A00AC2A9C /* AddDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrinkViewController.swift; sourceTree = "<group>"; };
+		D0F2C8C52853FD850073A8BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D0F2C8C72853FED60073A8BF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D0F2C8C9285429BD0073A8BF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D0F2C8CB285429C80073A8BF /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		D0F2C8CD28542AF40073A8BF /* AlbumDrinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDrinks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +59,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0EDA6D527FDF59A00AC2A9C /* CoreData.framework in Frameworks */,
+				D0F2C8CC285429C90073A8BF /* Photos.framework in Frameworks */,
+				D0F2C8C42853FCD00073A8BF /* FirebaseAuth in Frameworks */,
+				D0F2C8CA285429BD0073A8BF /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +88,7 @@
 		D056D15827EFB4D6005B6F16 /* erickayalapractica3 */ = {
 			isa = PBXGroup;
 			children = (
+				D0F2C8C52853FD850073A8BF /* GoogleService-Info.plist */,
 				D0EDA6D927FDF89800AC2A9C /* Drink+CoreDataClass.swift */,
 				D0EDA6DA27FDF89800AC2A9C /* Drink+CoreDataProperties.swift */,
 				D056D16F27EFCD81005B6F16 /* DelaGothicOne-Regular.ttf */,
@@ -88,6 +103,8 @@
 				D056D17127EFD329005B6F16 /* TableViewController.swift */,
 				D0EDA6D627FDF6E600AC2A9C /* erickayalapractica3.xcdatamodeld */,
 				D0EDA6DD27FE191A00AC2A9C /* AddDrinkViewController.swift */,
+				D0F2C8C72853FED60073A8BF /* LoginViewController.swift */,
+				D0F2C8CD28542AF40073A8BF /* AlbumDrinks.swift */,
 			);
 			path = erickayalapractica3;
 			sourceTree = "<group>";
@@ -95,6 +112,8 @@
 		D0EDA6D327FDF59A00AC2A9C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0F2C8CB285429C80073A8BF /* Photos.framework */,
+				D0F2C8C9285429BD0073A8BF /* AVFoundation.framework */,
 				D0EDA6D427FDF59A00AC2A9C /* CoreData.framework */,
 			);
 			name = Frameworks;
@@ -116,6 +135,9 @@
 			dependencies = (
 			);
 			name = erickayalapractica3;
+			packageProductDependencies = (
+				D0F2C8C32853FCD00073A8BF /* FirebaseAuth */,
+			);
 			productName = erickayalapractica3;
 			productReference = D056D15627EFB4D6005B6F16 /* erickayalapractica3.app */;
 			productType = "com.apple.product-type.application";
@@ -144,6 +166,9 @@
 				Base,
 			);
 			mainGroup = D056D14D27EFB4D6005B6F16;
+			packageReferences = (
+				D0F2C8C22853FCD00073A8BF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = D056D15727EFB4D6005B6F16 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -158,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F2C8C62853FD850073A8BF /* GoogleService-Info.plist in Resources */,
 				D056D16627EFB4D8005B6F16 /* LaunchScreen.storyboard in Resources */,
 				D056D16E27EFBD6D005B6F16 /* Drinks.plist in Resources */,
 				D056D16327EFB4D8005B6F16 /* Assets.xcassets in Resources */,
@@ -173,6 +199,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F2C8CE28542AF40073A8BF /* AlbumDrinks.swift in Sources */,
+				D0F2C8C82853FED60073A8BF /* LoginViewController.swift in Sources */,
 				D0EDA6DC27FDF89800AC2A9C /* Drink+CoreDataProperties.swift in Sources */,
 				D056D15E27EFB4D6005B6F16 /* ViewController.swift in Sources */,
 				D0EDA6D827FDF6E600AC2A9C /* erickayalapractica3.xcdatamodeld in Sources */,
@@ -344,7 +372,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dev.eraydel.erickayalapractica3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.eraydel.drinks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -374,7 +402,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dev.eraydel.erickayalapractica3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.eraydel.drinks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -404,6 +432,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D0F2C8C22853FCD00073A8BF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D0F2C8C32853FCD00073A8BF /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0F2C8C22853FCD00073A8BF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D0EDA6D627FDF6E600AC2A9C /* erickayalapractica3.xcdatamodeld */ = {

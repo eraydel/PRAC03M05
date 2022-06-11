@@ -43,5 +43,13 @@ class ViewController: UIViewController {
     @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func btnShare(_ sender: Any) {
+        print("sharing a content..")
+        let image:UIImage = imageview.image!
+        let objetosParaCompartir:[Any] = [ image, drink.name!, drink.ingredients! ]
+        let ac = UIActivityViewController(activityItems:objetosParaCompartir, applicationActivities: nil)
+        self.present(ac, animated: true)
+    }
 }
 
